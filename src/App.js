@@ -1,23 +1,26 @@
 
 import './App.css';
-import SayMyName from './components/SayMyName'
-import Pessoa from './components/Pessoa';
-import Frase from './components/Frase';
-import List from './components/List';
+// import OutraLista from './components/OutraLista';
+// import SayMyName from './components/SayMyName'
+// import Pessoa from './components/Pessoa';
+// import Frase from './components/Frase';
+// import List from './components/List';
+// import Evento from './components/Evento';
+// import Formjs from './components/Form';
+import {useState} from 'react'
+import SeuNomejs from './components/SeuNome';
+import Saudacaojs from './components/Saudacao';
 
 
 function App() {
 
-  const nome = "Maria";
+  const [nome, setNome] = useState();
 
   return (
     <div className="App">
-      <Frase/>
-      <List/>
-      <SayMyName nome="Pedro"/>
-      <SayMyName nome="Yuri"/>
-      <SayMyName nome={nome}/>
-      <Pessoa nome="Yuri" idade="22" profissao="Programador" foto="https://via.placeholder.com/150"/>
+      <h1>State Lift</h1>      
+      <SeuNomejs setNome={setNome}/>
+      <Saudacaojs nome={nome}/>
     </div>
   )
 };
