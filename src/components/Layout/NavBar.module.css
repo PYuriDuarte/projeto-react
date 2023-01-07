@@ -1,0 +1,12 @@
+.list{
+  display: flex;
+  list-style: none; 
+  background: #333;
+  text-decoration: none; 
+  height: 3rem;
+  justify-content: center;
+  align-items: center; 
+}
+.item{
+  margin-right: 1rem;
+}

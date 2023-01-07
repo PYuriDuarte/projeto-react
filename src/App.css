@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.contato{
+  text-align: center;
+}
+.body_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

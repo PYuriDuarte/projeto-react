@@ -1,4 +1,10 @@
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
+import Homejs from './pages/Home';
+import Sobrejs from './pages/Sobre';
+import Contatojs from './pages/Contato';
+import NavBarjs from './components/Layout/NavBar';
+import Footerjs from './components/Layout/Footer';
 import './App.css';
 // import OutraLista from './components/OutraLista';
 // import SayMyName from './components/SayMyName'
@@ -7,21 +13,23 @@ import './App.css';
 // import List from './components/List';
 // import Evento from './components/Evento';
 // import Formjs from './components/Form';
-import {useState} from 'react'
-import SeuNomejs from './components/SeuNome';
-import Saudacaojs from './components/Saudacao';
+// import {useState} from 'react'
+// import SeuNomejs from './components/SeuNome';
+// import Saudacaojs from './components/Saudacao';
 
 
 function App() {
 
-  const [nome, setNome] = useState();
-
   return (
-    <div className="App">
-      <h1>State Lift</h1>      
-      <SeuNomejs setNome={setNome}/>
-      <Saudacaojs nome={nome}/>
-    </div>
+    <Router>
+      <NavBarjs/>
+      <Routes>
+        <Route path='/' exact='true' element={<Homejs/>}></Route>
+        <Route path='/empresa' element={<Sobrejs/>}></Route>
+        <Route path='/contato' element={<Contatojs/>}></Route>
+      </Routes>
+      <Footerjs/>
+    </Router>
   )
 };
 
