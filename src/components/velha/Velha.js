@@ -65,12 +65,68 @@ function Velhajs(){
       if(pontos >=3){
         vitoria=true
         break
-        return
       }
     }
     //colunas
+
+    for(let c=0;c<3;c++){
+      pontos=0
+      for(let l=0;l<3;l++){
+        if(jogo[l][c]===simboloAtual){
+          pontos++
+        }
+      }
+      if(pontos >=3){
+        vitoria=true
+        break
+      }
+    }
+
+    //diagonais
+
+    pontos=0
+    for(let d=0;d<3;d++){
+      if(jogo[d][d]){
+        if(jogo[l][c]===simboloAtual){
+          pontos++
+        }
+      }    
+    }
+    if(pontos >=3){
+      vitoria=true
+    }
+    pontos=0
+    let l=0
+    for(let c=2;c>=0;c--){
+      if(jogo[l][c]===simboloAtual){
+        pontos++
+      }
+      l++
+    }
+    if(pontos >=3){
+      vitoria=true
+    }
+    return vitoria
   }
 
+  
+  const trocaJogador=()=>{
+    simboloAtual==='X'?setSimboloAtual('O'):setSimboloAtual('X')
+  }
+
+  const retPosi=(e)=>{
+    const p=e.target.getAttribute('data-pos')
+    const pos=[parseInt(p.substring(0,1)),parseInt(p.substring(1,2))]
+    return pos
+  }
+
+  const verificaEspacoVazio=(e)=>{
+    if(jogo[retPosi(e)[0]][retPosi(e)[1]]===''){
+      return true
+    }else{
+      return false
+    }
+  }
 
   return (
     <>
