@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Calculatorjs from '../components/calculadora/Calculator';
 import Imcjs from '../components/imc/Imc';
+import Velhajs from '../components/velha/Velha';
 
 const carros=[
   {categoria:"Esporte", preco:"110000", modelo:"Golf GTI", ano:"1998"},
@@ -77,6 +78,9 @@ function Contatojs(){
         </div> 
         <div>          
           <Calculatorjs/>
+        </div> 
+        <div>          
+          <Velhajs/>
         </div> 
       </div>
     </div>
