@@ -18,6 +18,7 @@ export default class ApiCarros extends React.Component{
   render(){
     return(
       <div>
+        <p>Usando Axios e componentes de class</p>
         {this.state.carros.map(
           carro=> <div key={carro.id}>({carro.id}){carro.marca} - {carro.modelo}</div>
         )}

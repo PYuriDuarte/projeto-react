@@ -15,6 +15,7 @@ export default function ApiCarrosSjs(){
 
   return (
     <>
+    <p>Usando Axios em componente padrão</p>
       {carros.map(carro => <div key={carro.id}>{carro.id} - {carro.marca} - {carro.modelo}</div>)}      
     </>
   )

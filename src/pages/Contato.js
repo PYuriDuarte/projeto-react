@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import ApiCarros from '../components/apicarros/ApiCarros';
 import ApiCarrosSjs from '../components/apicarros/ApiCarrosS';
+import ApiFetchjs from '../components/apicarros/ApiFetch';
 import Calculatorjs from '../components/calculadora/Calculator';
 import Imcjs from '../components/imc/Imc';
 import Velhajs from '../components/velha/Velha';
@@ -89,6 +90,9 @@ function Contatojs(){
         </div> 
         <div className='exerci'>          
           <ApiCarrosSjs/>
+        </div> 
+        <div className='exerci'>          
+          <ApiFetchjs/>
         </div> 
       </div>
     </div>
