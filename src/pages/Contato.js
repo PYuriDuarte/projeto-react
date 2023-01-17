@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import ApiCarros from '../components/apicarros/ApiCarros';
 import Calculatorjs from '../components/calculadora/Calculator';
 import Imcjs from '../components/imc/Imc';
 import Velhajs from '../components/velha/Velha';
@@ -81,6 +82,9 @@ function Contatojs(){
         </div> 
         <div>          
           <Velhajs/>
+        </div> 
+        <div>          
+          <ApiCarros/>
         </div> 
       </div>
     </div>
