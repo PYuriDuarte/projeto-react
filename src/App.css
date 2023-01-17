@@ -44,4 +44,15 @@
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.exerci{
+  flex: 20%;
+  margin: 0 3rem;
 }

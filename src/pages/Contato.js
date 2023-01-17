@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import ApiCarros from '../components/apicarros/ApiCarros';
+import ApiCarrosSjs from '../components/apicarros/ApiCarrosS';
 import Calculatorjs from '../components/calculadora/Calculator';
 import Imcjs from '../components/imc/Imc';
 import Velhajs from '../components/velha/Velha';
@@ -70,21 +71,24 @@ function Contatojs(){
     <div className='contato'>
       <h2>Contactjs</h2>
       <div className="body_container">
-        <div>
+        <div className='exerci'>
           {pesquisarCarro(categoria,setCategoria)}
           {tabelaCarros(categoria)}
         </div>
-        <div>          
+        <div className='exerci'>          
           <Imcjs/>
         </div> 
-        <div>          
+        <div className='exerci'>          
           <Calculatorjs/>
         </div> 
-        <div>          
+        <div className='exerci'>          
           <Velhajs/>
         </div> 
-        <div>          
+        <div className='exerci'>          
           <ApiCarros/>
+        </div> 
+        <div className='exerci'>          
+          <ApiCarrosSjs/>
         </div> 
       </div>
     </div>

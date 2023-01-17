@@ -85,13 +85,13 @@ function Imcjs(){
   const [resultado,setResultado]=useState(0);
 
   return (
-    <>
+    <div className='flex'>
       {formPeso(peso,setPeso)}
       {formAltura(altura,setAltura)}
       {formCalcular(peso,altura,setResultado)}
       {formResultado(resultado)}
       {tabelaIMC()}
-    </>
+    </div>
   )
 
 };
